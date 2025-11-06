@@ -1,0 +1,288 @@
+:root {
+  --rosa: #fddde6;
+  --lila: #e3d1ff;
+  --amarillo: #fff5c8;
+  --violeta: #c9b6ff;
+  --texto: #4a3f6b;
+  --blanco: #fff;
+  --sombra: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  background-color: var(--blanco);
+  background-image: url("/huella.png");
+  background-repeat: repeat;
+  background-size: 200px;
+  background-attachment: fixed;
+}
+
+body.dark-mode {
+  background-color: #1c1b22;
+  background-image: url("/huellaoscuro.png");
+  background-repeat: repeat;
+  background-size: 180px;
+  background-attachment: fixed;
+}
+
+body.dark-mode {
+  --gris-oscuro: #23222b;      
+  --gris-medio: #4c4d53;     
+  --gris-claro: rgb(64, 65, 70);       
+  --gris-card: #2a2832;        
+  --texto: #f2f1f6;            
+  --borde: #444155;           
+  --sombra: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  --btn1: #7ca2df;   
+  --btn2: #7550e7;  
+  --btn3: #e52682;  
+}
+
+body.dark-mode .dashboard {
+  background: #3b3c3d; 
+  color: var(--texto);
+  box-shadow: var(--sombra);
+  border-radius: 16px;
+  transition: background 0.4s ease, color 0.3s ease;
+}
+
+
+body.dark-mode .formulario {
+  background: #313335; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+}
+
+
+body.dark-mode .formulario input[type="text"],
+body.dark-mode .formulario input[type="number"],
+body.dark-mode .formulario input[type="file"] {
+  background-color: snow;
+  border: 1px solid var(--borde);
+  color: rgb(52, 52, 52);
+  border-radius: 8px;
+  transition: border 0.3s;
+}
+
+body.dark-mode .formulario input:focus {
+  border-color: #8c7ae6; 
+  outline: none;
+}
+
+/* Botones del formulario */
+body.dark-mode .formulario button {
+  background: linear-gradient(135deg, var(--btn1), var(--btn2), var(--btn3));
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(140, 110, 220, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+body.dark-mode .formulario button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(200, 160, 250, 0.5);
+}
+
+
+body.dark-mode .card {
+  background: linear-gradient(135deg, var(--gris-card), #322f3c);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  color: var(--texto);
+  border: 1.5px solid rgba(200, 180, 230, 0.3); 
+}
+
+/* Botones de las cards */
+body.dark-mode .card button {
+  background: linear-gradient(135deg, var(--btn1), var(--btn2), var(--btn3));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 0 10px rgba(160, 120, 230, 0.3);
+}
+
+body.dark-mode .card button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(200, 160, 250, 0.5);
+  opacity: 0.9;
+}
+
+
+.dashboard {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  color: var(--texto);
+  background: linear-gradient(135deg, #f8d4ff, #ffe1ec);
+  border-radius: 16px;
+}
+
+
+.dashboard h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  background: linear-gradient(120deg, #c69aff 0%, #d56b7b 40%, #c941d8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 1px 6px rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.5px;
+}
+
+
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  background: linear-gradient(135deg, #cce5ff, #e6ccff); 
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario input[type="text"],
+.formulario input[type="number"],
+.formulario input[type="file"] {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  flex: 1 1 180px;
+  font-size: 0.9rem;
+  background-color: white;
+}
+
+.formulario button {
+  background: linear-gradient(135deg, #2d789a, #ba1cba); 
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+}
+
+.formulario button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  box-shadow: 0 0 8px rgba(137, 207, 240, 0.4);
+}
+
+
+.error {
+  color: #d34b4b;
+  width: 100%;
+  text-align: center;
+}
+
+
+.lista-mascotas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+
+.card {
+  background: linear-gradient(90deg, var(--rosa), var(--lila));
+  border-radius: 16px;
+  box-shadow: var(--sombra);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
+  border: 1.5px solid rgba(150, 130, 180, 0.4); 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.mascota-foto {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 0.5rem;
+}
+
+
+.card h3 {
+  margin: 0.5rem 0 0.2rem;
+  color: var(--texto);
+}
+
+.card p {
+  color: var(--texto);
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
+/* Botones de acción */
+.card button {
+  background: linear-gradient(135deg, #8a2be2, #ff69b4);
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 0.8rem;
+  color: white;
+  cursor: pointer;
+  margin: 0 0.3rem;
+  font-weight: 500;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
+}
+
+
+
+/* Mensaje cuando no hay nada */
+.vacio {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--blanco);
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+  font-size: 1.1rem;
+  color: #333; /* color por defecto en modo claro */
+}
+
+/* Modo oscuro */
+body.dark-mode .vacio {
+  background-color: #222; /* fondo más oscuro */
+  color: #eee; /* texto claro para que se lea */
+}
+
+
+.formulario input[type="file"] {
+  display: none;
+}
+
+.file-label {
+  background: rgb(255, 244, 244);
+  color: #656363;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.file-label:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(200, 150, 230, 0.3);
+}
