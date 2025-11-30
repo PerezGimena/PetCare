@@ -120,7 +120,7 @@ export default function Dashboard() {
               <div key={m.id} className="card">
                 {m.foto && (
                   <img 
-                    src={m.foto.startsWith("data:") ? m.foto : process.env.PUBLIC_URL + m.foto} 
+                  src={m.foto.startsWith("data:") ? m.foto : m.foto} 
                     alt={m.nombre} 
                     className="mascota-foto" 
                   />
